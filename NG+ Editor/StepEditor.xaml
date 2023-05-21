@@ -1,0 +1,16 @@
+﻿<Window x:Class="NG__Editor.StepEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NG__Editor"
+        mc:Ignorable="d"
+        Title="StepEditor" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="Step Editor" Margin="290,10,220,0" VerticalAlignment="Top" FontSize="24" FontFamily="Arial Black"/>
+        <ListBox x:Name="Step" Margin="43,105,489,50" SelectionChanged="Step_SelectionChanged"/>
+        <TextBox x:Name="Property" HorizontalAlignment="Center" Margin="0,105,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="Property_TextChanged" Visibility="Hidden"/>
+        <Button Content="Save" HorizontalAlignment="Center" Margin="0,378,0,0" VerticalAlignment="Top" Height="46" Width="148" FontFamily="Arial" FontSize="20" Background="White" Click="Save"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,25 @@
+﻿<Window x:Class="NG__Editor.Properties"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NG__Editor"
+        mc:Ignorable="d"
+        Title="Properties" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <Label x:Name="Header" Content="[TEMP]" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="24"/>
+        <ListBox x:Name="PropertiesList" Margin="43,56,489,99" SelectionChanged="PropertiesList_SelectionChanged"/>
+        <TextBox x:Name="Value" HorizontalAlignment="Left" Margin="316,53,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Visibility="Hidden" TextChanged="Value_TextChanged"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="311,357,0,0" VerticalAlignment="Top" Height="46" Width="147" FontFamily="Arial" FontSize="20" Background="White" Click="Save"/>
+        <ComboBox x:Name="Dropdown" HorizontalAlignment="Left" Margin="316,53,0,0" VerticalAlignment="Top" Width="120" BorderBrush="White" Visibility="Hidden" SelectionChanged="Dropdown_SelectionChanged">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF0F0F0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+        <ListBox x:Name="SubPropertiesList" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="522,54,10,101" Visibility="Hidden" SelectionChanged="SubPropertiesList_SelectionChanged"/>
+
+    </Grid>
+</Window>
